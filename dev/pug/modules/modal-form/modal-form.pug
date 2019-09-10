@@ -1,0 +1,14 @@
+.modal-wrapper
+	div.head
+	div.modal
+		div.content
+			div.good-job
+				p Напишите нам 
+				form(action="").form_modal_window
+					input(type="text" name="name" placeholder="Имя" required)
+					input(type="text" name="surname" placeholder="Фамилия" required)
+					input(type="email" name="email" placeholder="Ваш email" required)
+					input(type="text" name="theme" placeholder="Тема" required)
+					textarea(name="message" placeholder="Сообщение" required)
+					input(name="sub" type="submit" value="ОТПРАВИТЬ").form_sub
+				div(id="erconts")

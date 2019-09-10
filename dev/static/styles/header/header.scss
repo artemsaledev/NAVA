@@ -1,0 +1,71 @@
+// .cd-main-header {
+//   z-index: 999;
+//   display: flex;
+//   flex: 1 0 100%;
+//   padding: 0 35px;
+//   align-items: center;
+//   background: $main-bg-color;
+//   border-bottom: 1px solid $main-active-color;
+//   a {
+//     text-decoration: none;
+//     text-transform: uppercase;
+//     font-weight: 500;
+//     color: #fff;
+//   }
+
+//   &::before {
+//     /* never visible - used to check MQ in JS */
+//     display: none;
+//     content: 'mobile';
+//   }
+
+//     &::before {
+//       content: 'desktop';
+//     }
+// }
+
+// .cd-logo-wrapper {
+//     display: flex;
+//     flex: 0 0 195px;
+//     align-items: center;
+// }
+
+// .cd-logo {
+//   display: block;
+//   margin: 0 10px;
+
+//   img {
+//     display: block;
+//     height: 52px;
+//   }
+// }
+
+// .order-callback {
+//   display: flex;
+//   flex-direction: row;
+//   flex: 0 0 60px;
+//   flex-wrap: wrap;
+//   font-family: $bold-font;
+//   align-items: center;
+//   line-height: 1.6;
+//   background: $main-active-color;
+//   padding: 7.5px 10px;
+//   transform: skew(30deg, 0);
+//   margin-right: 15px;
+
+// }
+//   .order-callback__phone {
+//     font-size: 14px;
+//     transform: skew(-30deg, 0);
+//     margin: 0 10px;
+//   }
+//   .order-callback__link {
+//     font-size: 10px;
+//     transform: skew(-30deg, 0);
+//     margin: 0 auto;
+//   }
+
+// .header__basket-min {
+//   flex: 0 0 35px;
+//   margin-bottom: 175px;
+// }
