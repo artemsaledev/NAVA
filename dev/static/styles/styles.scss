@@ -80,9 +80,9 @@ button:focus {
 *, *:before, *:after { box-sizing: border-box; }
 
 ///////////////////////////////////////////
-header, main, footer {display: flex;}
+header, main, article, footer {display: flex;}
 
-header, main {
+main {
   flex: 1 0 auto;
 }
 

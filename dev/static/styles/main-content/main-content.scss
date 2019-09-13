@@ -1,8 +1,54 @@
-// .cd-main-content {
-//   display: flex;
-//   overflow: hidden;
-//   flex: 1 0 100%;
-// }
+article {
+  padding: 0 400px;
+}
+
+.head-article, .main-company-name, .offer-article {display: flex;}
+
+.cd-main-content { 
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-article {
+  display: flex;
+  flex: 1 0 100%;
+  font-family: $main-font;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.head-article {
+  font-size: 1.714em;
+}
+
+.main-company-name {
+  font-family: $head-font;
+  font-size: 7.143em;
+  margin-top: 25px;
+}
+
+.offer-article {
+  font-size: 1.286em;
+  padding: 0;
+  line-height: 18px;
+  margin-top: 72px;
+}
+
+.more-article {
+  border-radius: 6px;
+  border: none;
+  background: $button-back-color;
+  color: $button-text-color;
+  display: flex;
+  font-size: 1.143em;
+  justify-content: center;
+  line-height: 24px;
+  margin-top: 55px;
+  padding: 8.5px 0px;
+  width: 10.65em;
+}
 
 // .offer-text_image {
 //   float: left;
