@@ -6,17 +6,21 @@
 
 html {
   font-size: $base-font-size;
+  height: 100%;
+  background-color: #070707;
 }
 
 body { 
   background-color: $main-bg-color;
+  background: url('/static/images/general/main.jpg') center no-repeat;
   font-family: $main-font;
   color: $base-text-color; 
   overflow: hidden!important;
   margin: 0; 
   display: flex;
-  flex: 1 0 100%;
-  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  padding: 60px 30px 0;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -76,6 +80,15 @@ button:focus {
 *, *:before, *:after { box-sizing: border-box; }
 
 ///////////////////////////////////////////
+header, main, footer {display: flex;}
+
+header, main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 50px 0 0;
+}
 
 .head-line {
    animation: line-run  0.9s 0.35s ease alternate;

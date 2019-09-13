@@ -12,8 +12,10 @@
   </head>
   <body>
     <header class="main-header">
+      <div class="main-nav__modal"></div>
+      <button class="cd-nav-trigger" aria-label="Toggle menu"><span></span></button>
       <div class="logo-wrapper"><a class="logo logo" href="#"><img src="static/images/general/Logo.png" alt="Logo NAVA Group"></a></div>
-      <nav>
+      <nav class="main-nav">
         <ul class="nav-list">
           <li class="nav-list__item toggle-active"><a href="index.html#main">Главная</a></li>
           <li class="nav-list__item"><a href="about-us.html#about-us">О нас</a></li>
@@ -21,50 +23,51 @@
           <li class="nav-list__item"><a href="train-tickets.html#train-tickets">ЖД Перевозки</a></li>
           <li class="nav-list__item"><a href="avia-transfer.html#avia-transfer">Авиа Перевозки</a></li>
           <li class="nav-list__item"><a href="event.html#event">Event</a></li>
-          <li class="nav-list__item"><a href="charity.html#charity">Благотворительнсть</a></li>
+          <li class="nav-list__item"><a href="charity.html#charity">Благотворительность</a></li>
           <li class="nav-list__item"><a href="contacts.html#contacts">Контакты</a></li>
         </ul>
       </nav>
-      <div class="language-toggle"><span class="language-toggle__russian">рус</span><span class="language-toggle__english">eng</span></div>
+      <div class="language-toggle"><span class="language-toggle__russian toggle-active">рус</span><span class="language-toggle__english">eng</span></div>
     </header>
-    <nav class="side-nav">
-      <ul class="side-list">
-        <li class="side-list__label"><a name="main"></a></li>
-        <li class="side-list__label"><a name="about-us"></a></li>
-        <li class="side-list__label"><a name="technics"></a></li>
-        <li class="side-list__label"><a name="train-tickets"></a></li>
-        <li class="side-list__label"><a name="avia-transfer"></a></li>
-        <li class="side-list__label"><a name="event"></a></li>
-        <li class="side-list__label"><a name="charity"></a></li>
-        <li class="side-list__label"><a name="contacts"></a></li>
-      </ul>
-    </nav>
-    <main class="cd-main-content"></main>
-    <div class="main-article">
-      <h3 class="head-article">Компания</h3>
-      <p class="main-company-name">NAVA</p>
-      <p class="offer-article">Новое поколение цифровых сервисов, повышающих качество и скорость обслуживания клиентов</p>
-      <button class="more-article">Подробнее<a class="more-article__link" href="#0"></a></button>
-    </div>
-    <div class="modal-wrapper">
-      <div class="head"></div>
-      <div class="modal">
-        <div class="content">
-          <div class="good-job">
-            <p>Напишите нам </p>
-            <form class="form_modal_window" action="">
-              <input type="text" name="name" placeholder="Имя" required>
-              <input type="text" name="surname" placeholder="Фамилия" required>
-              <input type="email" name="email" placeholder="Ваш email" required>
-              <input type="text" name="theme" placeholder="Тема" required>
-              <textarea name="message" placeholder="Сообщение" required></textarea>
-              <input class="form_sub" name="sub" type="submit" value="ОТПРАВИТЬ">
-            </form>
-            <div id="erconts"></div>
+    <main class="cd-main-content">
+      <div class="main-article">
+        <h3 class="head-article">Компания</h3>
+        <p class="main-company-name">NAVA</p>
+        <p class="offer-article">Новое поколение цифровых сервисов, повышающих качество и скорость обслуживания клиентов</p>
+        <button class="more-article">Подробнее<a class="more-article__link" href="#0"></a></button>
+      </div>
+      <nav class="side-nav">
+        <ul class="side-list">
+          <li class="side-list__label"><a name="main"></a></li>
+          <li class="side-list__label"><a name="about-us"></a></li>
+          <li class="side-list__label"><a name="technics"></a></li>
+          <li class="side-list__label"><a name="train-tickets"></a></li>
+          <li class="side-list__label"><a name="avia-transfer"></a></li>
+          <li class="side-list__label"><a name="event"></a></li>
+          <li class="side-list__label"><a name="charity"></a></li>
+          <li class="side-list__label"><a name="contacts"></a></li>
+        </ul>
+      </nav>
+      <div class="modal-wrapper">
+        <div class="head"></div>
+        <div class="modal">
+          <div class="content">
+            <div class="good-job">
+              <p>Напишите нам </p>
+              <form class="form_modal_window" action="">
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="text" name="surname" placeholder="Фамилия" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <input type="text" name="theme" placeholder="Тема" required>
+                <textarea name="message" placeholder="Сообщение" required></textarea>
+                <input class="form_sub" name="sub" type="submit" value="ОТПРАВИТЬ">
+              </form>
+              <div id="erconts"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer>
       <div class="copyright"><span class="copyright">&copy; NAVA </span></div>
     </footer>

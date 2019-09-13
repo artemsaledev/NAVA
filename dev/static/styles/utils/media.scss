@@ -1,11 +1,37 @@
-@media screen and (max-device-width: 768px) {
-  
+@media screen and (max-device-width: 1339px) {
+	.main-header { 
+    justify-content: space-between;
+	}
+	.logo-wrapper { order: 1; margin: 0 auto;}
+	.cd-nav-trigger {
+		display: flex;
+	}
+	.main-nav {  
+		order: 0;
+		display: none;
+	}
+	.nav-list__item { margin: 8px 0; }
+	.language-toggle {order: 2;}
+
 }
 
-@media screen and (min-device-width: 475px) {  
-	 
+@media screen and (min-device-width: 1440px) {  
+	body {padding: 60px 150px 0 160px;}
+	.main-nav {
+		margin: 0 70px; 
+	}
 }
 
-@media screen and (min-device-width: 980px) {
-
+@media screen and (max-device-width: 425px) {
+	.language-toggle span {
+  		display: flex;
+  		flex: 1; 
+  	} 
+  	.language-toggle {
+  		flex-wrap: wrap;
+	    flex: 0 1 30px;
+	    position: relative;
+	    top: -7px;
+  	} 
+  	.language-toggle__russian:first-child {margin: 0px 0 5px; }
 }

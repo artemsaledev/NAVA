@@ -1,8 +1,11 @@
 header.main-header
+	.main-nav__modal
+	button(aria-label="Toggle menu").cd-nav-trigger
+					span
 	div.logo-wrapper
 		a(href="#").logo.logo
 			img(src="static/images/general/Logo.png" alt="Logo NAVA Group")
-	nav
+	nav.main-nav
 		ul.nav-list
 			li.nav-list__item.toggle-active
 				a(href="index.html#main") Главная
@@ -17,9 +20,9 @@ header.main-header
 			li.nav-list__item
 				a(href="event.html#event") Event
 			li.nav-list__item
-				a(href="charity.html#charity") Благотворительнсть
+				a(href="charity.html#charity") Благотворительность
 			li.nav-list__item
 				a(href="contacts.html#contacts") Контакты
 	.language-toggle
-		span.language-toggle__russian рус
+		span.language-toggle__russian.toggle-active рус
 		span.language-toggle__english eng
