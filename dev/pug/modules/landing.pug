@@ -1,0 +1,35 @@
+extends template/main
+
+block variables
+	- var title = 'About us'
+
+block content
+	article.article--about-us
+		.main-article.main-article--sm
+			h3.main-title.main-title--second.main-title__line.main-title__line--second О Нас
+			.article--second-wrap.right--scroll-direction
+				p.head-article.head-article--second
+					span.head-article--service.head-article--strong Нава cервис 
+					span.head-article--service-text – технологичный провайдер дополнительных услуг, успешно работает
+					span.head-article--service-date.head-article--strong с 2008 года.
+				p.advantages-head Мы занимаем одну из лидирующих позиций в сегментах:
+				.advantages-group
+					.advantages-segment-group
+						a(href="avia-transfer.html").advantages-segment-group__icon
+							+icon('aeroplane', 'facebook-prev__icon')
+							span.advantages-segment-group__text Авиации 
+
+					.advantages-segment-group
+						a(href="train-tickets.html").advantages-segment-group__icon
+							+icon('train', 'facebook-prev__icon')
+							span.advantages-segment-group__text Железнодорожных перевозок
+
+					.advantages-segment-group
+						a(href="contacts.html").advantages-segment-group__icon
+							+icon('smartphone', 'facebook-prev__icon')
+							span.advantages-segment-group__text Техники
+
+				p.advantages-footer Портфель наших услуг и сервисов постоянно расширяется, предлагая все более новые и технологичные решения, повышающие комфорт наших клиентов.
+				p.text-about-us 
+					span.head-article--strong Нава сервис 
+					|– это в первую очередь, клиенто-ориентированная компания, которая создала все условия для качественного и действительно быстрого обслуживания своих клиентов.

@@ -16,13 +16,15 @@ html(lang="ru-RU").js
 		<!--[if lt IE 9]>
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
 		<![endif]-->
-	body
+	body.body--background-main
+		.img-overlay
 		include ../modules/header/header
-		main.cd-main-content
+		main.cd-main-content.cd-main-content--index
 			block content
-			include ../modules/slidebar/articles
 			include ../modules/nav-menu/navbar
-			//- include ../modules/modal-form/modal-form
-		//- include ../modules/footer/footer
+		script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
 		script(src="static/js/libs.min.js")
 		script(src="static/js/main.js")
+		//- include ../modules/slidebar/articles
+			//- include ../modules/modal-form/modal-form
+		//- include ../modules/footer/footer

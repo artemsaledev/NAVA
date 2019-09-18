@@ -1,0 +1,39 @@
+extends template/contacts-tmpl
+
+block variables
+	- var title = 'Контакты'
+
+block content
+	article.article--about-us
+		.main-article.main-article--sm
+			h3.main-title.main-title--second.main-title__line.main-title__line--second.main-title__line--second-contacts.line-animate.head-text-animate Контакты
+			div(id="boxscroll").article--second-wrap.right--scroll-direction
+				p.head-article.head-article--second-contacts
+					span.head-article--service-text Телефон:
+				.contacts-head
+					p.phone-link
+						a(title="Позвонить" href="tel:+84956496777").head-article--strong 8 (495) 649 67 77
+					p.phone-link
+						a(title="Позвонить" href="tel:+88007071138").head-article--strong 8 (800) 707 11 38
+				address.adress-link Адрес:
+					p.head-article--strong Москва, Смоленский Пассаж 7-эт.
+				button.send-message.trigger Написать нам
+					a(href="#").send-message__link
+	.modal-wrapper
+		div.head
+		div.modal
+			div.good-job
+				p Напишите нам
+			div.content
+				span(id="click-to-close").close
+				form(action="form.php").form_modal_window
+					.group-input-block
+						input(type="text" name="name" placeholder="Имя" required)
+						input(type="text" name="lastname" placeholder="Фамилия" required)
+						input(type="email" name="email" placeholder="Ваш email" required)
+						.recaptcha Место для вставки каптчи
+					.group-input-block
+						input(type="text" name="theme" placeholder="Тема" required)
+						textarea(name="message" placeholder="Сообщение" required)
+						input(name="sub" type="submit" value="ОТПРАВИТЬ").form_sub 
+					div(id="erconts")

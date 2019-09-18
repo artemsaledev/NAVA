@@ -7,13 +7,23 @@ let uglify = require('gulp-uglify'),
 
 module.exports = function () {
     $.gulp.task('libsJS:dev', () => {
-        return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js'])
+        return $.gulp.src([
+            'node_modules/svg4everybody/dist/svg4everybody.min.js',
+            'dev/static/js/scroll/jquery.nicescroll.iframehelper.min.js',
+            'dev/static/js/scroll/jquery.nicescroll.min.js',
+            'dev/static/js/form/ajaxform.js',
+            ])
             .pipe(concat('libs.min.js'))
             .pipe($.gulp.dest(scriptsPATH.ouput));
     });
 
     $.gulp.task('libsJS:build', () => {
-        return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js'])
+        return $.gulp.src([
+            'node_modules/svg4everybody/dist/svg4everybody.min.js',
+            'dev/static/js/scroll/jquery.nicescroll.iframehelper.min.js',
+            'dev/static/js/scroll/jquery.nicescroll.min.js',
+            'dev/static/js/form/ajaxform.js',
+            ])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.ouput))

@@ -1,343 +1,42 @@
-// .cd-nav-trigger { // navigation trigger - visible only on small devices
-//   position: relative;
-//   background: none;
-//   display: block;
-//   width: 32px;
-//   margin: 0 auto;
+.side-nav {
+  display: flex;
+  flex: 1 0 100%;
+  position: absolute;
+}
 
-//   span, span::before, span::after { // menu icon
-//     position: absolute;
-//     height: 3px;
-//     width: 25px;
-//     background: $cd-color-3;
-//   }
+.side-list {
+  display: flex;
+  flex-direction: column;
+}
 
-//   span { // line in the center
-//     top: 50%;
-//     right: 4px;
-//     margin: 10px 0;
-//     transition: background .2s;
-//   }
+.side-list__label {
+  display: flex;
+  margin-bottom: 22px;
+}
 
-//   span::before, span::after { // other 2 lines
-//     content: '';
-//     right: 0;
-//     transform-origin: 0 50%;
-//     transition: transform .2s;
-//   }
+.side-list-link {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  padding: 2px;
+  width: 14px;
+  height: 14px;
+}
 
-//   span::before { // menu icon top line
-//     top: -6px;
-//   }
+.side-list__label--active {
+  background: transparent;
+  border: 1.25px solid #fff;
+}
 
-//   span::after { // menu icon bottom line
-//     top: 6px;
-//   }
-
-// }
-
-// .cd-nav-trigger--nav-is-visible { // icon animation
-//   span { // hide line in the center
-//     background: $main-bg-color;
-//   }
-
-//   span::before, span::after { // make sure other 2 lines are visible
-//     background: $cd-color-3;
-//   }
-
-//   span::before {
-//     transform: translateX(4px) translateY(-3px) rotate(45deg);
-//   }
-
-//   span::after {
-//     transform: translateX(4px) translateY(2px) rotate(-45deg);
-//   }
-// }
-
-// // sidebar navigation
-// .cd-side-nav {
-//   position: absolute; 
-//   display: flex;
-//   overflow-y: auto;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   justify-content: center;
-//   min-height: 100%;
-//   left: 34px;
-//   top: 0px;
-//   width: 210px;
-//   padding-bottom: 55px;
-//   background-color: $side-nav-color;  
-//   transition: .2s;
-//   visibility: hidden;
-//   opacity: 0;
-
-//   a {
-//     text-decoration: none;
-//   }
-// }
-
-// .cd-side-nav>ul:last-child {
-//   margin: 36px 0 100px;
-// }
-
-// .cd-side-nav--is-visible {
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-// .cd-side__item, .cd-nav__item { // side items and nav items are identical on smaller screens
-//   font-size: 1em;
-//   position: relative;
-
-//   a {
-//     position: relative;
-//     display: block;
-//     padding: 10px;
-//     color: $cd-color-3;
-//   }
-
-//   > a {
-//     border-bottom: 1px solid $cd-color-1;
-//     display: flex;
-//     align-items: center;
-//   }
-// }
-
-// .cd-side__item > a::before { // left icon
-//   content: '';
-//   height: 16px;
-//   width: 16px;
-//   margin-right: 10px;
-//   background: url('../images/nocompilesvg/cd-nav-icons.svg') no-repeat 0 0;
-// }
-
-// .cd-side__item { 
-//     a {
-//       padding-left: 10px;
-//     }
-//     > a {
-//       border-bottom: none;
-//     }
-//     &:hover > a {
-//       background-color: $cd-color-3;
-//       color: $main-active-color;
-//     }
-// }
-
-// // icons
-// .cd-side__item--overview > a::before {
-//   background-position: -64px 0;
-// }
-
-// .cd-side__item--notifications > a::before {
-//   background-position: -32px 0;
-// }
-
-// .cd-side__item--comments > a::before {
-//   background-position: -48px 0;
-// }
-
-// .cd-side__item--bookmarks > a::before {
-//   background-position: 0 0;
-// }
-
-// .cd-side__item--images > a::before {
-//   background-position: -17px 0;
-// }
-
-// .cd-side__item--has-children, .cd-nav__item--has-children {
-//   > a::after { // arrow icon
-//     content: '';
-//     position: absolute;
-//     top: calc(50% - 8px);
-//     height: 16px;
-//     width: 16px;
-//     right: 50%;
-//     background: url('../images/nocompilesvg/cd-arrow.svg');
-//   }
-
-//     > a::after { // hide icon
-//       display: none;
-//     }
-// }
-
-// .cd-side__item--has-children {
-//     &:not(.cd-side__item--selected).hover .cd-side__sub-list {
-//       display: block;
-//       position: absolute;
-//       z-index: 999;
-//       left: 100%;
-//       top: 0;
-//       width: 160px;
-//     }
-// }
-
-// .cd-side__item--expanded { // item clicked on - trigger sub nav visibility on small devices
-//   .cd-side__sub-list, .cd-nav__sub-list { // show sub nav on small screens if item is clicked on
-//     display: block;
-//   }
-
-//   > a::after {
-//     transform: rotate(180deg);
-//   }
-
-//     .cd-side__sub-list, .cd-nav__sub-list { // hide sub nav on bigger devices (it's visible as menu on :hover)
-//       display: none;
-//     }
-// }
-
-// .cd-side__item--selected { // selected item
-//   > a {
-//     box-shadow: inset 3px 0 0 $cd-color-2;
-//     background-color: $side-active-color;
-//   }
-
-//     .cd-side__sub-list {
-//       display: block; // show sub menu if item = current
-//     }
-// }
-
-// .cd-side__sub-list, .cd-nav__sub-list {
-//   background-color: $cd-color-1;
-//   display: none;
-//   z-index: 999999;
-// }
-
-// .cd-side__sub-item {
-//   a[aria-current='page'] {
-//     color: $cd-color-4;
-//   }
-//     a:hover {
-//       color: $cd-color-4;
-//     }
-// }
-
-// .cd-side__label {
-//   padding: 10px;
-
-//   span {
-//     text-transform: uppercase;
-//     font-weight: bold;
-//     font-size: 0.7em;
-//     color: $cd-color-3;
-//     letter-spacing: .1em;
-//   }
-// }
-
-// .cd-count { // notification badge
-//   position: absolute;
-//   right: 10px;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   padding: 10px;
-//   line-height: 1;
-//   background-color: $cd-color-4;
-//   border-radius: .25em;
-
-//   color: $cd-color-3;
-//   font-weight: bold;
-//   font-size: 0.75em; 
-// }
-
-// .cd-side__btn {
-//   margin: 10px; 
-
-//   button {
-//     display: block;
-//     width: 100%;
-//     padding: 10px;
-//     background-color: $main-active-color;
-//     border-radius: .25em;
-//     box-shadow: inset 0 1px 0 rgba(#fff, .2);
-//     text-align: center;
-//     color: $cd-color-3;
-//     font-weight: bold;
-//   }
-// }
-
-// // navigation
-// .cd-nav__list {
-//     flex: 1 0 425px;
-//     justify-content: flex-end;
-//     margin-right: 40px;
-//     font-size: 0.7em; 
-//     display: flex;
-//     align-items: center;
-// }
-
-// .cd-nav__item {
-//     display: flex;
-//     align-items: center;
-//     margin-right: 1em;
-//     height: 100%;
-//     z-index: 99999999;
-
-//     &:last-of-type {
-//       margin-right: 0;
-//     }
-    
-//     a {
-//       font-size: 1.1em;
-//       color: $cd-color-3;
-//       padding: 10px;
-//       border: none;
-//     }
-// }
-
-// .cd-nav__item > a:hover {
-//   border-bottom: 1px solid $cd-color-4;
-//   transition: all 0.1s ease-in-out;
-//   margin-bottom: -1px;
-// }
-
-// .cd-nav__item--account {
-//   img { // avatar image
-//     display: none;
-//   }
-//     > a {
-//       height: 100%;
-//       display: flex;
-//       align-items: center;
-//       padding: 0 10px;
-//       background-color: $cd-color-1;
-//     }
-
-//     img {
-//       height: 20px;
-//       width: 20px;
-//       border-radius: 50%;
-//       margin-right: 10px;
-//       display: block;
-//     }
-
-//     &:hover .cd-nav__sub-list {
-//       display: block;
-//     }
-// }
-
-// .cd-nav__sub-list {
-//     position: absolute;
-//     top: 55px;
-//     right: 0;
-//     width: 200px;
-//     display: block;
-//     display: none;
-// }
-
-// .cd-nav__sub-item {
-//     a {
-//       padding: 10px;
-//     }
-// }
-
-// .cd-side__list {
-//   width: 100%;
-// }
-
-// .nav-basket-wight-icon {
-//   width: 22px;
-//   height: 22px;
-//   padding-bottom: 5px; 
-//   fill: #ffffff;
-// }
+.side-list:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  bottom: -145%;
+  right: 6px;
+  background: #fff;
+}

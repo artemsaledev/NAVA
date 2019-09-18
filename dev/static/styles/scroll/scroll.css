@@ -1,0 +1,15 @@
+     .get-nicer {
+       overflow: auto;
+     }
+     
+     /*.nice-wrapper {}*/
+     
+     .nicescroll-rails {
+       background-color: rgb(51, 122, 183);
+     }
+     
+     .nicescroll-cursors {
+       border: none !important;
+       background-color: #000 !important;
+       border-radius: 0 !important;
+     }

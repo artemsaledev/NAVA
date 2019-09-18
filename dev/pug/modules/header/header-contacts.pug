@@ -1,0 +1,28 @@
+header.main-header
+	.main-nav__modal
+	button(aria-label="Toggle menu").cd-nav-trigger
+		span
+	div.logo-wrapper
+		a(href="index.html").logo
+			img(src="static/images/general/logo.png" alt="Logo NAVA Group")
+	nav.main-nav
+		ul.nav-list
+			li.nav-list__item
+				a(href="index.html") Главная
+			li.nav-list__item
+				a(href="about-us.html").nav-list__item--us-w О нас
+			li.nav-list__item
+				a(href="technics.html") Техника
+			li.nav-list__item
+				a(href="train-tickets.html") ЖД Перевозки
+			li.nav-list__item
+				a(href="avia-transfer.html") Авиа Перевозки
+			li.nav-list__item
+				a(href="event.html") Event
+			li.nav-list__item
+				a(href="charity.html") Благотворительность
+			li.nav-list__item.toggle-active
+				a(href="contacts.html") Контакты
+	.language-toggle
+		span.language-toggle__russian.toggle-active рус
+		span.language-toggle__english eng

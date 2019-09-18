@@ -1,21 +1,53 @@
-// .article {
-//   background: rgba(255, 255, 255, 0.9);
-//   color: #000;
-//   text-align: center;
-// }
-// .group-article-text {
-//   display: flex;
-//   margin: 15px 0;
-//   text-align: left;
-// }
+.advantages-group {
+  padding: 53px 0 35px;
+}
 
-// .article img {
-//   max-width: 60%;
-//   float: left;
-// }
-// .text-offer-article {
-//    margin: 35px 0;
-// }
-// .text-about-article {
-//   margin: 0 15px;
-// }
+.advantages-segment-group {
+  margin-bottom: 33px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.advantages-segment--wrapper:first-child {
+  margin-bottom: 30px;
+}
+
+.advantages-segment--wrapper {
+  display: flex;
+}
+
+.advantages-group, .advantages-segment--wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 0 100%;
+    text-align: center;
+  } 
+
+.advantages-segment-group svg {
+  width: 3em;
+  height: 3em;
+  margin: 0 0 12px;
+  fill: #fff;
+}
+
+.advantages-segment-group__text {
+	font-family: $bold-font;
+  display: flex;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+}
+
+
+.advantages-head--other-sections, .advantages-footer, .text-about-us {
+  margin-bottom: 37px;
+}
+
+.head-article--second-contacts {margin: 78px 0 0px;}
+
+.adress-link { font-style: normal;}
+
+.adress-link p { margin-top: 12px;}
+
+.contacts-head {margin: 6px 0 44px;}
